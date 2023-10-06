@@ -1,1 +1,4 @@
-# R1-VVVVVV
+# VVVVVV
+
+## Inputs:
+Use 'A' or 'D' to move left and right
