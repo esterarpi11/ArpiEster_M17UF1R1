@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
-    private Animator animator;
-    private SpriteRenderer spriteRenderer;
-    private Rigidbody2D rigidbody2D;
-    private Transform transform;
-    private float speed = 8f;
+    public Animator animator;
+    public SpriteRenderer spriteRenderer;
+    public Rigidbody2D rigidbody2D;
+    public Transform transform;
+    private float speed = 5f;
     private float horizontal;
     private float vertical;
 
@@ -17,6 +17,7 @@ public class PlayerManager : MonoBehaviour
     void Start()
     {
         animator = gameObject.GetComponent<Animator>();
+        rigidbody2D = gameObject.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -24,28 +25,27 @@ public class PlayerManager : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxis("Vertical");
-        animator.SetBool("R_Key", false);
         Run();
 
     }
     void Run()
     {
 
-        if (Input.GetKeyDown(KeyCode.D))
+        if (horizontal > 0)
         {
-            animator.SetBool("R_Key", true);
+            animator.SetBool("Movement_Key", true);
             flip("X", false);
             transform.position += new Vector3(horizontal, 0f, 0f) * speed * Time.deltaTime;
         }
-        if (Input.GetKeyDown(KeyCode.A))
+        if (horizontal < 0)
         {
-            animator.SetBool("R_Key", true);
+            animator.SetBool("Movement_Key", true);
             flip("X", true);
             transform.position += new Vector3(horizontal, 0f, 0f) * speed * Time.deltaTime;
         }
-        if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
+        if (horizontal == 0 )
         {
-            animator.SetBool("R_Key", false);
+            animator.SetBool("Movement_Key", false);
         }
 
         void flip(string axis, bool value)
