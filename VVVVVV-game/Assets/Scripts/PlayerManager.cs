@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -31,6 +32,11 @@ public class PlayerManager : MonoBehaviour
         {
             Gravity();
         }
+
+        // if (transform.position.y <= -1.37)
+        // {
+        //     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        // }
 
         Run();
     }
