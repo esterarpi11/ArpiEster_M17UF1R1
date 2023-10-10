@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "f:\\itb\\M17\\JuegosGit\\VVVVVV\\VVVVVV-game\\Assembly-CSharp.csproj",
+      "projectUniqueName": "f:\\itb\\M17\\JuegosGit\\R1-VVVVVV\\VVVVVV-game\\Assembly-CSharp.csproj",
       "projectName": "Assembly-CSharp",
-      "projectPath": "f:\\itb\\M17\\JuegosGit\\VVVVVV\\VVVVVV-game\\Assembly-CSharp.csproj",
+      "projectPath": "f:\\itb\\M17\\JuegosGit\\R1-VVVVVV\\VVVVVV-game\\Assembly-CSharp.csproj",
       "packagesPath": "C:\\Users\\DamV2\\.nuget\\packages\\",
-      "outputPath": "f:\\itb\\M17\\JuegosGit\\VVVVVV\\VVVVVV-game\\obj\\",
+      "outputPath": "f:\\itb\\M17\\JuegosGit\\R1-VVVVVV\\VVVVVV-game\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\DamV2\\AppData\\Roaming\\NuGet\\NuGet.Config",
