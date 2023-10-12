@@ -27,18 +27,24 @@ public class PlayerManager : MonoBehaviour
     void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
-
         if (rigidbody2D.velocity.y == 0)
         {
             Gravity();
         }
-
-        // if (transform.position.y <= -1.37)
-        // {
-        //     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        // }
-
         Run();
+    }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("Collision detected with: " + collision.gameObject.tag);
+
+        if (collision.gameObject.CompareTag("NextLevel"))
+        {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        if (collision.gameObject.CompareTag("ReturnLevel"))
+        {
+           SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);     
+        }
     }
     void Gravity()
     {
