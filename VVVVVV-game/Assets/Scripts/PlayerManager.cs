@@ -33,19 +33,6 @@ public class PlayerManager : MonoBehaviour
         }
         Run();
     }
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        Debug.Log("Collision detected with: " + collision.gameObject.tag);
-
-        if (collision.gameObject.CompareTag("NextLevel"))
-        {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
-        if (collision.gameObject.CompareTag("ReturnLevel"))
-        {
-           SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);     
-        }
-    }
     void Gravity()
     {
         if (Input.GetKeyDown(KeyCode.Space))

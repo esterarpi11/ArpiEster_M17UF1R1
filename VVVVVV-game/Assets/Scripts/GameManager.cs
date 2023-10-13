@@ -4,17 +4,28 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public enum GameState { Ready, Playing };
 
 public class GameManager : MonoBehaviour
 {
-    public GameState gamestate = GameState.Ready;
     // Start is called before the first frame update
     void Start()
     {
-        SceneManager.LoadScene(sceneName: "MAINMENU");
-    }
 
+    }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("NextLevel"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            DontDestroyOnLoad(gameObject);
+        }
+        if (collision.gameObject.CompareTag("ReturnLevel"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+            Destroy(gameObject);
+            //gameObject.transform.Translate(transform.position);
+        }
+    }
     // Update is called once per frame
     void Update()
     {
