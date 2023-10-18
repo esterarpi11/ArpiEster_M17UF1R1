@@ -9,7 +9,6 @@ public class PlayerManager : MonoBehaviour
     public Animator animator;
     public SpriteRenderer spriteRenderer;
     public Rigidbody2D rigidbody2D;
-    public Transform transform;
     private float speed = 5f;
     private float gravitySpeed = 10f;
     private bool rightSide = true;
@@ -26,6 +25,7 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(rigidbody2D.velocity.y);
         horizontal = Input.GetAxisRaw("Horizontal");
         if (rigidbody2D.velocity.y == 0)
         {
@@ -42,18 +42,7 @@ public class PlayerManager : MonoBehaviour
             rigidbody2D.gravityScale = (rightSide) ? 1 : -1;
             spriteRenderer.flipY = !rightSide;
 
-            Vector2 newSpeed = rigidbody2D.velocity;
 
-            if (!rightSide)
-            {
-                newSpeed.y = gravitySpeed * -1;
-                rigidbody2D.velocity = newSpeed;
-            }
-            else
-            {
-                newSpeed.y = gravitySpeed * 1;
-                rigidbody2D.velocity = newSpeed;
-            }
         }
     }
     void Run()
