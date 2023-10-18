@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
         if (collision.gameObject.CompareTag("Obstacle"))
         {
             animator.SetBool("Dead", true);
+            SceneManager.LoadScene(sceneName:"GAMEOVER");          
         }
     }
     // Update is called once per frame
