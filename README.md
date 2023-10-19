@@ -11,4 +11,5 @@ Per canviar de gravetat es fa servir la tecla espai
 
 ## Descripció:
 
-El
+El joc és del gènere plataforma amb puzzles.
+Per a la meva versió he escollit un tileset d'aspecte de caverna i el meu jugador resembla a un petit explorador
