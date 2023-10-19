@@ -1,0 +1,335 @@
+fileFormatVersion: 2
+guid: 954d1e5eac1ecd349b58d1aea90cd9b3
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 16x16 knight 3 v3_5
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 401
+        width: 15
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 493c958a1c2ca7b449640bb2695ae7bb
+      internalID: 270501767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 knight 3 v3_6
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 401
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 442fe80cea850864eab2e946b66ce4b3
+      internalID: -1531264025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 knight 3 v3_7
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 400
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcb4c229c36eaa04eba3caf91c1ee57f
+      internalID: -221991404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 knight 3 v3_8
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 400
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ebd8ceac87f08c45859e68057371696
+      internalID: -1448771640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 knight 3 v3_9
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 402
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5295d102cf7732e41883d79cc498df63
+      internalID: 1715526100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 knight 3 v3_10
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 402
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f50c5d773434ab4394ffc5b9e39f6d0
+      internalID: 182551952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 knight 3 v3_11
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 400
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ce24383f1ea1bc47a6e44009819453a
+      internalID: 228415591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 knight 3 v3_12
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 400
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b890df10d91ca1b42ab3b0f937ca548a
+      internalID: 892784347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      16x16 knight 3 v3_0: 1386377795
+      16x16 knight 3 v3_1: 564214421
+      16x16 knight 3 v3_10: 182551952
+      16x16 knight 3 v3_11: 228415591
+      16x16 knight 3 v3_12: 892784347
+      16x16 knight 3 v3_13: -245295001
+      16x16 knight 3 v3_14: 351276808
+      16x16 knight 3 v3_15: -1561055234
+      16x16 knight 3 v3_16: -217732237
+      16x16 knight 3 v3_17: -1907578773
+      16x16 knight 3 v3_18: 15150516
+      16x16 knight 3 v3_19: 1896995547
+      16x16 knight 3 v3_2: -1111227358
+      16x16 knight 3 v3_20: -34132967
+      16x16 knight 3 v3_21: -1921779504
+      16x16 knight 3 v3_22: 1662659209
+      16x16 knight 3 v3_23: 184146094
+      16x16 knight 3 v3_24: -120420966
+      16x16 knight 3 v3_25: -2111144135
+      16x16 knight 3 v3_26: -187138243
+      16x16 knight 3 v3_27: 1084799140
+      16x16 knight 3 v3_28: -852027979
+      16x16 knight 3 v3_29: -337427254
+      16x16 knight 3 v3_3: -673941752
+      16x16 knight 3 v3_30: 1223236035
+      16x16 knight 3 v3_31: 1751378131
+      16x16 knight 3 v3_32: -1474519468
+      16x16 knight 3 v3_33: -1178336013
+      16x16 knight 3 v3_34: -865373320
+      16x16 knight 3 v3_35: 286274277
+      16x16 knight 3 v3_36: -1763029093
+      16x16 knight 3 v3_37: 1175433895
+      16x16 knight 3 v3_38: 1776714899
+      16x16 knight 3 v3_39: 892377250
+      16x16 knight 3 v3_4: -2091230458
+      16x16 knight 3 v3_5: 270501767
+      16x16 knight 3 v3_6: -1531264025
+      16x16 knight 3 v3_7: -221991404
+      16x16 knight 3 v3_8: -1448771640
+      16x16 knight 3 v3_9: 1715526100
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
