@@ -10,7 +10,6 @@ public class PlayerManager : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public Rigidbody2D rigidbody2D;
     private float speed = 5f;
-    private float gravitySpeed = 10f;
     private bool rightSide = true;
     private float horizontal;
 

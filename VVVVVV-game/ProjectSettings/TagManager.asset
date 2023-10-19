@@ -7,6 +7,7 @@ TagManager:
   - NextLevel
   - ReturnLevel
   - Obstacle
+  - Wall
   layers:
   - Default
   - TransparentFX
