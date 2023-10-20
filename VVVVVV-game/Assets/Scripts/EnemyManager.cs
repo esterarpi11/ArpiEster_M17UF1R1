@@ -7,10 +7,13 @@ public class EnemyManager : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public GameObject endPoint;
     public GameObject startPoint;
-    float change = 0.05f;
     float speed = 5f;
     Vector3 direction = Vector3.right;
+    public AudioSource audio;
 
+    private void Start()
+    {
+    }
     private void Update()
     {
         transform.Translate(direction * speed * Time.deltaTime);
@@ -20,14 +23,16 @@ public class EnemyManager : MonoBehaviour
         if (collision.gameObject.CompareTag("Finish"))
         {
             direction = Vector3.left;
-            transform.position = new Vector2(transform.position.x - change, transform.position.y);
+            transform.position = new Vector2(transform.position.x, transform.position.y);
             spriteRenderer.flipX = true;
+            audio.Play();
         }
         if (collision.gameObject.CompareTag("Respawn"))
         {
             direction = Vector3.right;
-            transform.position = new Vector2(transform.position.x + change, transform.position.y);
+            transform.position = new Vector2(transform.position.x, transform.position.y);
             spriteRenderer.flipX = false;
+            audio.Play();
         }
     }
 }
