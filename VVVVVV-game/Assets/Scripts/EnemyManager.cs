@@ -23,14 +23,12 @@ public class EnemyManager : MonoBehaviour
         if (collision.gameObject.CompareTag("Finish"))
         {
             direction = Vector3.left;
-            transform.position = new Vector2(transform.position.x, transform.position.y);
             spriteRenderer.flipX = true;
             audio.Play();
         }
         if (collision.gameObject.CompareTag("Respawn"))
         {
             direction = Vector3.right;
-            transform.position = new Vector2(transform.position.x, transform.position.y);
             spriteRenderer.flipX = false;
             audio.Play();
         }

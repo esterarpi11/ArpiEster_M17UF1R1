@@ -6,16 +6,24 @@ using UnityEngine.SceneManagement;
 
 public class PlayerManager : MonoBehaviour
 {
-    public Animator animator;
-    public SpriteRenderer spriteRenderer;
-    public Rigidbody2D rigidbody2D;
+    public static PlayerManager player;
+    private Animator animator;
+    private SpriteRenderer spriteRenderer;
+    private Rigidbody2D rigidbody2D;
     private float speed = 5f;
     private bool rightSide = true;
     private float horizontal;
+    public GameManager gameManager;
 
+    void Awake()
+    {
+        if (player != null && player != this) Destroy(this.gameObject);
+        player = this;
+    }
     // Start is called before the first frame update
     void Start()
     {
+        DontDestroyOnLoad(gameObject);
         animator = gameObject.GetComponent<Animator>();
         rigidbody2D = gameObject.GetComponent<Rigidbody2D>();
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
@@ -40,40 +48,45 @@ public class PlayerManager : MonoBehaviour
 
             rigidbody2D.gravityScale = (rightSide) ? 1 : -1;
             spriteRenderer.flipY = !rightSide;
-
-
         }
     }
     void Run()
     {
-
-        if (horizontal > 0)
+        if (horizontal != 0)
         {
             animator.SetBool("Movement_Key", true);
-            flip("X", false);
             transform.position += new Vector3(horizontal, 0f, 0f) * speed * Time.deltaTime;
-        }
-        if (horizontal < 0)
-        {
-            animator.SetBool("Movement_Key", true);
-            flip("X", true);
-            transform.position += new Vector3(horizontal, 0f, 0f) * speed * Time.deltaTime;
-        }
-        if (horizontal == 0)
-        {
-            animator.SetBool("Movement_Key", false);
-        }
-
-        void flip(string axis, bool value)
-        {
-            if (axis == "X")
+            if (horizontal > 0)
             {
-                spriteRenderer.flipX = value;
+                spriteRenderer.flipX = false;
             }
             else
             {
-                spriteRenderer.flipY = value;
+                spriteRenderer.flipX = true;
             }
+        }
+        else if (horizontal == 0)
+        {
+            animator.SetBool("Movement_Key", false);
+        }
+    }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("NextLevel"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            gameManager.spawn = "NextLevel";
+        }
+        if (collision.gameObject.CompareTag("ReturnLevel"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+            gameManager.spawn = "ReturnLevel";
+        }
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            animator.SetBool("Dead", true);
+            SceneManager.LoadScene(sceneName: "GAMEOVER");
+            Destroy(gameObject);
         }
     }
 }

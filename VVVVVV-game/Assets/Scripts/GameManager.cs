@@ -7,31 +7,20 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public Animator animator;
+    private Animator animator;
+    public static GameManager gameManager;
+    public string spawn;
 
+    void Awake()
+    {
+        if (gameManager != null && gameManager != this) Destroy(this.gameObject);
+        gameManager = this;
+    }
     // Start is called before the first frame update
     void Start()
     {
+        DontDestroyOnLoad(gameManager);
         animator = gameObject.GetComponent<Animator>();
-    }
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("NextLevel"))
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-            DontDestroyOnLoad(gameObject);
-        }
-        if (collision.gameObject.CompareTag("ReturnLevel"))
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
-            Destroy(gameObject);
-            //gameObject.transform.Translate(transform.position);
-        }
-        if (collision.gameObject.CompareTag("Obstacle"))
-        {
-            animator.SetBool("Dead", true);
-            SceneManager.LoadScene(sceneName:"GAMEOVER");          
-        }
     }
     // Update is called once per frame
     void Update()
@@ -39,6 +28,18 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             SceneManager.LoadScene(sceneName: "PAUSEMENU");
+        }
+    }
+
+    public void buttonOnClick(int escena)
+    {
+        if (escena != 0)
+        {
+            SceneManager.LoadScene(escena);
+        }
+        else
+        {
+            Application.Quit();
         }
     }
 }
