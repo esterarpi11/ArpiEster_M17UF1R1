@@ -79,20 +79,26 @@ public class PlayerManager : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("NextLevel"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            gameManager.sceneChange(SceneManager.GetActiveScene().buildIndex + 1);
             gameManager.spawn = "NextLevel";
         }
         if (collision.gameObject.CompareTag("ReturnLevel"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+            gameManager.sceneChange(SceneManager.GetActiveScene().buildIndex - 1);
             gameManager.spawn = "ReturnLevel";
         }
         if (collision.gameObject.CompareTag("Obstacle"))
         {
             isDead = true;
             animator.SetBool("Dead", true);
-            //SceneManager.LoadScene(sceneName: "GAMEOVER");
-            //Destroy(gameObject);
+            StartCoroutine(wait());
         }
+    }
+    IEnumerator wait()
+    {
+        yield return new WaitForSecondsRealtime(2);
+        Destroy(gameObject);
+        SceneManager.LoadScene(sceneName: "GAMEOVER");  
+
     }
 }

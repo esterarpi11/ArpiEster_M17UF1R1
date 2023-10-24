@@ -189,8 +189,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -378,6 +378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 240d69e8f0b75b846b3d92312d56ce06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawn: 
 --- !u!4 &203455775
 Transform:
   m_ObjectHideFlags: 0
@@ -450,7 +451,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 870223573, guid: 9232f0ae9c5f18e49b57c0f9f6bb3c5f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -575,8 +576,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1316366883}
   - {fileID: 601489639}
+  - {fileID: 1316366883}
   - {fileID: 1713678558}
   - {fileID: 918253393}
   m_Father: {fileID: 0}
@@ -671,7 +672,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 203455774}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: buttonOnClick
+        m_MethodName: sceneChange
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -785,8 +786,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1012,7 +1013,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1140,7 +1141,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 203455774}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: buttonOnClick
+        m_MethodName: sceneChange
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1163,7 +1164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

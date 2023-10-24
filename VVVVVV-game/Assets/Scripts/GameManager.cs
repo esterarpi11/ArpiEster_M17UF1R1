@@ -14,13 +14,12 @@ public class GameManager : MonoBehaviour
     {
         if (gameManager == null)
         {
-            DontDestroyOnLoad(gameObject);
             gameManager = this;
+            DontDestroyOnLoad(gameObject);
         }
         else if (gameManager != null && gameManager != this)
         {
             Destroy(this.gameObject);
-            return;
         }
     }
     // Start is called before the first frame update
@@ -34,11 +33,10 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             SceneManager.LoadScene(sceneName: "PAUSEMENU");
-            Destroy(PlayerManager.player);
         }
     }
 
-    public void buttonOnClick(int escena)
+    public void sceneChange(int escena)
     {
         if (escena != 0)
         {
