@@ -8,6 +8,8 @@ TagManager:
   - ReturnLevel
   - Obstacle
   - Wall
+  - SpawnReturnLevel
+  - SpawnNextLevel
   layers:
   - Default
   - TransparentFX

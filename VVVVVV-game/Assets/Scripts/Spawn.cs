@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class Spawn : MonoBehaviour
 {
+    private GameManager gameManager;
     PlayerManager player;
-    GameManager gameManager;
     private void Awake()
     {
-        if (gameManager.spawn == "NextLevel")
-        {
-            player.transform.position = gameObject.transform.position;
-        }
-        else if (gameManager.spawn == "ReturnLevel")
+        gameManager = GameManager.gameManager;
+        player = PlayerManager.player;
+
+        if ("Spawn" + gameManager.spawn == gameObject.tag)
         {
             player.transform.position = gameObject.transform.position;
         }

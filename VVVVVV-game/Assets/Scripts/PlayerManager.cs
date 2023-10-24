@@ -13,16 +13,22 @@ public class PlayerManager : MonoBehaviour
     private float speed = 5f;
     private bool rightSide = true;
     private float horizontal;
-    public GameManager gameManager;
+    private GameManager gameManager;
+    private bool isDead = false;
 
     void Awake()
     {
-        if (player != null && player != this) Destroy(this.gameObject);
-        player = this;
+        if (player == null)
+        {
+            DontDestroyOnLoad(gameObject);
+            player = this;
+        }
+        else Destroy(this.gameObject);
     }
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = GameManager.gameManager;
         DontDestroyOnLoad(gameObject);
         animator = gameObject.GetComponent<Animator>();
         rigidbody2D = gameObject.GetComponent<Rigidbody2D>();
@@ -32,7 +38,6 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(rigidbody2D.velocity.y);
         horizontal = Input.GetAxisRaw("Horizontal");
         if (rigidbody2D.velocity.y == 0)
         {
@@ -52,7 +57,7 @@ public class PlayerManager : MonoBehaviour
     }
     void Run()
     {
-        if (horizontal != 0)
+        if (horizontal != 0 && !isDead)
         {
             animator.SetBool("Movement_Key", true);
             transform.position += new Vector3(horizontal, 0f, 0f) * speed * Time.deltaTime;
@@ -84,9 +89,10 @@ public class PlayerManager : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Obstacle"))
         {
+            isDead = true;
             animator.SetBool("Dead", true);
-            SceneManager.LoadScene(sceneName: "GAMEOVER");
-            Destroy(gameObject);
+            //SceneManager.LoadScene(sceneName: "GAMEOVER");
+            //Destroy(gameObject);
         }
     }
 }
