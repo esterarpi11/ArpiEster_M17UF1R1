@@ -10,11 +10,12 @@ public class PlayerManager : MonoBehaviour
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D rigidbody2D;
-    private float speed = 5f;
+    private float speed = 8f;
     private bool rightSide = true;
     private float horizontal;
     private GameManager gameManager;
     private bool isDead = false;
+    private AudioSource audio;
 
     void Awake()
     {
@@ -33,6 +34,7 @@ public class PlayerManager : MonoBehaviour
         animator = gameObject.GetComponent<Animator>();
         rigidbody2D = gameObject.GetComponent<Rigidbody2D>();
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        audio = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -44,6 +46,7 @@ public class PlayerManager : MonoBehaviour
             Gravity();
         }
         Run();
+        if(SceneManager.GetActiveScene().name == "PausaMenu") Destroy(gameObject);
     }
     void Gravity()
     {
@@ -89,8 +92,9 @@ public class PlayerManager : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Obstacle"))
         {
-            isDead = true;
+            audio.Play();
             animator.SetBool("Dead", true);
+            isDead = true;
             StartCoroutine(wait());
         }
     }
@@ -98,7 +102,7 @@ public class PlayerManager : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(2);
         Destroy(gameObject);
-        SceneManager.LoadScene(sceneName: "GAMEOVER");  
+        SceneManager.LoadScene(sceneName: "GameOverMenu");  
 
     }
 }

@@ -7,13 +7,22 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    private PlayerManager playerManager;
     public static GameManager gameManager;
+    private AudioSource audio;
     public string spawn;
 
     void Awake()
     {
-        if (gameManager == null)
+        string scene = SceneManager.GetActiveScene().name;
+
+        if (scene.Contains("Menu"))
         {
+            gameObject.SetActive(false);
+        }
+        else if (gameManager == null)
+        {
+            gameObject.SetActive(true);
             gameManager = this;
             DontDestroyOnLoad(gameObject);
         }
@@ -25,7 +34,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-               
+        audio = GetComponent<AudioSource>();
+        audio.Play();
     }
     // Update is called once per frame
     void Update()

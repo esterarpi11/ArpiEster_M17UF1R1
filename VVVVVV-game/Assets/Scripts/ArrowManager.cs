@@ -6,13 +6,14 @@ public class ArrowManager : MonoBehaviour
 {
     public Transform spawn;
     public Transform endPoint;
+    private AudioSource audio;
 
-    float speed = 5f;
+    float speed = 8f;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -22,7 +23,7 @@ public class ArrowManager : MonoBehaviour
         if (transform.position.x >= endPoint.position.x)
         {
             transform.position = new Vector2 (spawn.position.x, transform.position.y);
-
+            audio.Play();
         }
     }
 
