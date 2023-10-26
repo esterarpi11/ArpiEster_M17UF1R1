@@ -7,7 +7,6 @@ public class ArrowManager : MonoBehaviour
     public Transform spawn;
     public Transform endPoint;
     private AudioSource audio;
-
     float speed = 8f;
 
     // Start is called before the first frame update

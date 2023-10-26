@@ -10,7 +10,7 @@ public class PlayerManager : MonoBehaviour
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D rigidbody2D;
-    private float speed = 8f;
+    private float speed = 5f;
     private bool rightSide = true;
     private float horizontal;
     private GameManager gameManager;
@@ -93,6 +93,7 @@ public class PlayerManager : MonoBehaviour
         if (collision.gameObject.CompareTag("Obstacle"))
         {
             audio.Play();
+            gameManager.spawn = "";
             animator.SetBool("Dead", true);
             isDead = true;
             StartCoroutine(wait());

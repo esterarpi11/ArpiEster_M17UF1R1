@@ -9,6 +9,7 @@ public class EnemyManager : MonoBehaviour
     public GameObject startPoint;
     float speed = 5f;
     Vector3 direction = Vector3.right;
+    Vector3 switchDirection = Vector3.left;
     public AudioSource audio;
 
     private void Start()
@@ -20,17 +21,8 @@ public class EnemyManager : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Finish"))
-        {
-            direction = Vector3.left;
-            spriteRenderer.flipX = true;
-            audio.Play();
-        }
-        if (collision.gameObject.CompareTag("Respawn"))
-        {
-            direction = Vector3.right;
-            spriteRenderer.flipX = false;
-            audio.Play();
-        }
+        direction = Vector3.Scale(direction, switchDirection);
+        spriteRenderer.flipX = !spriteRenderer.flipX;
+        audio.Play();
     }
 }
