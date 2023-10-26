@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            SceneManager.LoadScene(sceneName: "PAUSEMENU");
+            SceneManager.LoadScene(sceneName: "PauseMenu");
         }
     }
 

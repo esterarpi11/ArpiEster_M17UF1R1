@@ -46,11 +46,11 @@ public class PlayerManager : MonoBehaviour
             Gravity();
         }
         Run();
-        if(SceneManager.GetActiveScene().name == "PausaMenu") Destroy(gameObject);
+        if (SceneManager.GetActiveScene().name == "PausaMenu") Destroy(gameObject);
     }
     void Gravity()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && !isDead)
         {
             rightSide = !rightSide;
 
@@ -103,7 +103,7 @@ public class PlayerManager : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(2);
         Destroy(gameObject);
-        SceneManager.LoadScene(sceneName: "GameOverMenu");  
+        SceneManager.LoadScene(sceneName: "GameOverMenu");
 
     }
 }
