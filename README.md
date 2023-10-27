@@ -51,3 +51,4 @@ Per a la meva versió he escollit un tileset d'aspecte de caverna i el meu jugad
 - **Pause**: Escena que apareix al prèmer escape
 - **Game Over**: Escena que apareix al morir
 - **End Game**: Escena que apareix al guanyar
+- **Nivells**: El joc compta amb 6 nivells en els quals la dificultat va en augment. En un nivell el jugador es troba amb una fletxa que avança i ha d'esquivar i en una altra un enemic el qual es va movent i no pot tocar-lo.
