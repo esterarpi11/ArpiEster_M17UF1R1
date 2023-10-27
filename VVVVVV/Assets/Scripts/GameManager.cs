@@ -7,9 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    private PlayerManager playerManager;
     public static GameManager gameManager;
-    private AudioSource audio;
+    private new AudioSource audio;
     public string spawn;
 
     void Awake()

@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class ArrowManager : MonoBehaviour
 {
-    public Transform spawn;
+    public Transform startPoint;
     public Transform endPoint;
-    private AudioSource audio;
+    private new AudioSource audio;
     float speed = 8f;
 
     // Start is called before the first frame update
@@ -21,7 +21,7 @@ public class ArrowManager : MonoBehaviour
         transform.Translate(Vector3.right * speed * Time.deltaTime);
         if (transform.position.x >= endPoint.position.x)
         {
-            transform.position = new Vector2 (spawn.position.x, transform.position.y);
+            transform.position = new Vector2(startPoint.position.x, transform.position.y);
             audio.Play();
         }
     }

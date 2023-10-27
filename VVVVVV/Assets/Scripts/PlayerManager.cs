@@ -10,12 +10,12 @@ public class PlayerManager : MonoBehaviour
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D rigidbody2D;
+    private GameManager gameManager;
     private float speed = 6f;
     private bool rightSide = true;
     private float horizontal;
-    private GameManager gameManager;
     private bool isDead = false;
-    private AudioSource audio;
+    private new AudioSource audio;
 
     void Awake()
     {

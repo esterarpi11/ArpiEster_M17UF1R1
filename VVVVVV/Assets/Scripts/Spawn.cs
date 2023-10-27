@@ -5,7 +5,7 @@ using UnityEngine;
 public class Spawn : MonoBehaviour
 {
     private GameManager gameManager;
-    PlayerManager player;
+    private PlayerManager player;
     private void Awake()
     {
         gameManager = GameManager.gameManager;
